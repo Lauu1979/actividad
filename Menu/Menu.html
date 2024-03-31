@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0" />
+    <title>Contenedor de ejercicios</title>
+  </head>
+  <body>
+    <script>
+      do {
+        Opcion = Number(
+          prompt(
+            "Bienvenido seleccione una opcion\
+        1.Operadores \
+        2.Condicionales\
+        3.Ciclos\
+        0.Salir\
+        "
+          )
+        );
+
+        switch (Opcion) {
+          /*-------------------------------------------------------------------------------------------*/
+          case 1:
+            Eleccion = Number(
+              prompt(
+                "Seleccione el ejercicio que desa ver\
+                    1.Calcular el área de un triángulo.\
+                    2.Dos números por teclado y sumarlos.\
+                    3.Número elevado al cuadrado.\
+                    4.Euros a dólares.\
+                    5.El lado de un cuadrado , valor del área y del perímetro.\
+                    6.Area y el volúmen de un cilindro.\
+                    7.El radio de una circunferencia y longitud de la misma y el área (pi*r)^2 del círculo.\
+                    8.Promedio de tres (3) números.\
+                    "
+              )
+            );
+
+            switch (Eleccion) {
+              case 1:
+                function calcularAreaTriangulo(altura, base) {
+                  return (altura * base) / 2;
+                }
+
+                function imprimirAreaTriangulo(altura, base) {
+                  const resultado = calcularAreaTriangulo(altura, base);
+                  console.log(
+                    "El resultado del área del triángulo es:",
+                    resultado
+                  );
+                }
+
+                console.log("Calcular el área de un triángulo");
+
+                const altura = 13;
+                const base = 20;
+
+                console.log("Altura del triángulo:", altura);
+                console.log("Base del triángulo:", base);
+
+                imprimirAreaTriangulo(altura, base);
+
+                break;
+              case 2:
+                let numeros = (num1, num2) => num1 + num2;
+
+                function imprinum(num1, num2) {
+                  const resul = numeros(num1, num2);
+                  console.log("El resultado de la suma es : ", resul);
+                }
+
+                console.log("Ingresar dos números por teclado y sumarlos");
+                const num1 = 233;
+                const num2 = 230;
+
+                console.log("Primer numero:", num1);
+                console.log("Segindo numero:", num2);
+
+                imprinum(num1, num2);
+                let num = 14;
+                break;
+
+              case 3:
+                let elevado = (num) => num * num;
+                const respuesta = elevado(num);
+                console.log(respuesta);
+                break;
+
+              case 4:
+                let euros = 10;
+                let tasa = 1.08;
+                function convercioneurosAdolares(euros, tasa) {
+                  return euros * tasa;
+                }
+
+                function imprimirDolares(euros, tasa) {
+                  const solu = convercioneurosAdolares(euros, tasa);
+                  console.log("Los euros en dolares son : ", solu);
+                }
+                console.log(
+                  "Escribir un algoritmo que convierta de euros a dólares."
+                );
+                console.log("Numero de euros :", euros);
+                imprimirDolares(euros, tasa);
+                break;
+
+              case 5:
+                const calcularAreaYPerimetro = (lado) => {
+                  console.log("Lado de un cuadrado: " + lado);
+                  let perimetro = lado * 4;
+                  console.log("El perímetro del cuadrado es: " + perimetro);
+                  let area = lado * lado;
+                  console.log("El área del cuadrado es: " + area);
+                };
+                calcularAreaYPerimetro(25);
+                break;
+
+              case 6:
+                console.log(
+                  "Escribir un algoritmo que determine el área y el volúmen de un cilindro"
+                );
+                let Radio = 5;
+                let Altura = 23;
+                let pi = 3.14;
+                function CalcularArea(Radio, Altura, pi) {
+                  return 2 * pi * radio * (Altura + Radio);
+                }
+
+                function imprimirArea(Radio, Altura, pi) {
+                  let res = CalcularArea(Radio, Altura, pi);
+                  console.log("El area del cilindro es :", res);
+                }
+
+                function CalcularVolumen(pi, radio, Altura) {
+                  return pi * Radio * Radio * Altura;
+                }
+
+                function imprimirVolumen(pi, Radio, Altura) {
+                  let res = CalcularVolumen(PI, Radio, Altura);
+                  console.log("El volumen del cilindro es: ", res);
+                }
+                imprimirArea(Radio, Altura, pi);
+                imprimirVolumen(pi, Radio, Altura);
+                break;
+
+              case 7:
+                console.log(
+                  "El radio de una circunferencia y escriba la longitud de la misma y el área (pi*r)^2 del círculo inscrito."
+                );
+                console.log("Radio de la circurferencia");
+                let radio = 5;
+                let PI = 3.14;
+                let longitud = (radio, PI) => 2 * PI * radio;
+                const resulta = longitud(radio, PI);
+                let area = (PI, radio) => (PI * radio) ^ 2;
+                const result = area(PI.radio);
+                console.log(
+                  "La longitud es :",
+                  resulta,
+                  "Y el area : ",
+                  result
+                );
+                break;
+
+              case 8:
+                console.log(
+                  "Calcular el promedio de tres (3) números ingresados por teclado"
+                );
+                let nume1 = 23;
+                let nume2 = 20;
+                let nume3 = 3;
+                console.log("Primer numero ", nume1);
+                console.log("Segundo numero", nume2);
+                console.log("Tercer numero", nume3);
+                function CalcularPromedio(nume1, nume2, nume3) {
+                  return (nume1 + nume2 + nume3) / 3;
+                }
+
+                function imorimirPromedio(nume1, nume2, nume3) {
+                  const result = CalcularPromedio(nume1, nume2, nume3);
+                  console.log("El promedio de los numero es :", result);
+                }
+
+                imorimirPromedio(nume1, nume2, nume3);
+            }
+            break;
+          /*-------------------------------------------------------------------------------------------*/
+          case 2:
+            Eleccion1 = Number(
+              prompt(
+                "Seleccione el ejercicio que desea ver\
+            1.Saber si el número ingresado por teclado es positivo o negativo.\
+            2.Decir cuál de los dos numeros es el mayor y cuál el menor.\
+            3.Leer tres números enteros positivos y que calcule el menor y el mayor de ellos.\
+            4.Sumar si A es menor que B o sino restarlos.\
+            5.Encontrar el cociente entre A y B.\
+            6.(A-B) Sumarlos si al menos uno de ellos es negativo, en caso contrario multiplicarlos.\
+            7.Determinar si un año es bisiesto o no.\
+            "
+              )
+            );
+
+            switch (Eleccion1) {
+              case 1:
+                console.log(
+                  "Escribir un numero para saber si el numero es negativo o positivo"
+                );
+                const determinarPositivoNegativo = (numero) => {
+                  console.log("El número ingresado es: " + numero);
+                  if (numero > 0) {
+                    console.log("Este número es positivo.");
+                  } else if (numero < 0) {
+                    console.log("Este número es negativo.");
+                  } else {
+                    console.log("Este número es igual a cero.");
+                  }
+                };
+                determinarPositivoNegativo(-89);
+                break;
+              case 2:
+                console.log(
+                  "Ingrese dos numeros para determinar cual es mayor y cual es menor "
+                );
+                function determinarMayorMenor(primer_nu, segundo_nu) {
+                  console.log("Primer número ingresado: ", primer_nu);
+                  console.log("Segundo número ingresado: ", segundo_nu);
+
+                  if (primer_nu === segundo_nu) {
+                    console.log("Ambos números son iguales.");
+                  } else if (primer_nu > segundo_nu) {
+                    console.log(
+                      "El primer número ",
+                      primer_nu,
+                      " es mayor que el segundo número ",
+                      segundo_nu
+                    );
+                  } else {
+                    console.log(
+                      "El segundo número ",
+                      segundo_nu,
+                      " es mayor que el primer número",
+                      primer_nu
+                    );
+                  }
+                }
+                let primer_nu = -20;
+                let segundo_nu = 34;
+                determinarMayorMenor(primer_nu, segundo_nu);
+                break;
+              case 3:
+                console.log(
+                  "Leer tres números enteros positivos y calcular cual es el mayor y cual es el menor "
+                );
+                function encontrarMayorMenor(
+                  primer_num,
+                  segundo_num,
+                  tercer_num
+                ) {
+                  console.log("Primer número ingresado:", primer_num);
+                  console.log("Segundo número ingresado:", segundo_num);
+                  console.log("Tercer número ingresado:", tercer_num);
+
+                  let menor_num;
+                  let mayor_num;
+
+                  if (primer_num < segundo_num) {
+                    menor_num = primer_num;
+                  } else {
+                    menor_num = segundo_num;
+                  }
+
+                  if (menor_num < tercer_num) {
+                    menor_num = menor_num;
+                  } else {
+                    menor_num = tercer_num;
+                  }
+
+                  if (primer_num > segundo_num) {
+                    mayor_num = primer_num;
+                  } else {
+                    mayor_num = segundo_num;
+                  }
+
+                  if (mayor_num > tercer_num) {
+                    mayor_num = mayor_num;
+                  } else {
+                    mayor_num = tercer_num;
+                  }
+
+                  console.log(
+                    "El número mayor de los tres números ingresados es:",
+                    mayor_num
+                  );
+                  console.log(
+                    "El número menor de los tres números ingresados es:",
+                    menor_num
+                  );
+                }
+                let primer_num = 67;
+                let segundo_num = 98;
+                let tercer_num = 33;
+                encontrarMayorMenor(primer_num, segundo_num, tercer_num);
+                break;
+              case 4:
+                console.log(
+                  "Dados dos números A y B, sumarlos si A es menor que B o sino restarlos."
+                );
+                let DadosDosNumeros = (numer_a, numer_b) => {
+                  if (numer_a < numer_b) {
+                    suma = numer_a + numer_b;
+                    console.log("El resultado de la suma es :", suma);
+                  } else {
+                    resta = numer_a - numer_b;
+                    console.log("El resultado de la resta es :", resta);
+                  }
+                };
+                DadosDosNumeros(123, 145);
+                let numer_a = 123;
+                let numer_b = 145;
+                console.log(
+                  "Los numeros ingresados fueron A = ",
+                  numer_a,
+                  " Y B = ",
+                  numer_b
+                );
+
+                break;
+              case 5:
+                console.log(
+                  "Dos numeros A y B encontar el cociente entre ellos, la division por cero no es valoda anunciar que la division no es posible  "
+                );
+                let Cociente = (numero_a, numero_b) => {
+                  if (numero_a !== 0 && numero_b !== 0) {
+                    let cociente = numero_a / numero_b;
+                    console.log(
+                      "El cociente entre estos dos números es:",
+                      cociente
+                    );
+                  } else {
+                    console.log("La división no es posible");
+                  }
+                };
+
+                Cociente(33, 55);
+                break;
+              case 6:
+                console.log(
+                  "Dos números A y B, sumarlos si uno de ellos es negativo si no multiplicarlos "
+                );
+
+                function SumarlooMultiplicarlos(numero_a, numero_b) {
+                  console.log(
+                    "Los numeros ingresados son A = ",
+                    numero_a,
+                    " Y B = ",
+                    numero_b
+                  );
+                  if ((numero_a, numero_b < 0)) {
+                    suma = numero_a + numero_b;
+                    console.log("El resultado de la suma es : ", suma);
+                  } else {
+                    multi = numero_a * numero_b;
+                    console.log(
+                      "El resultado de la multiplicacion es :",
+                      multi
+                    );
+                  }
+                }
+                let numero_a = 89;
+                let numero_b = 46;
+                SumarlooMultiplicarlos(numero_a, numero_b);
+                break;
+              case 7:
+                console.log("Determine si un año es bisiesto o no.");
+                function AñoBisiesto(año) {
+                  console.log("El año ingresado es : ", año);
+                  if ((año % 4 == 0 && año % 100 != 0) || año % 400 == 0) {
+                    console.log("El año ingresa SI es  bisiesto");
+                  } else {
+                    console.log("El año ingresado NO es bisiesto");
+                  }
+                }
+                let año = 2028;
+                AñoBisiesto(año);
+            }
+            break;
+          /*-------------------------------------------------------------------------------------------*/
+          case 3:
+            Eleccion2 = Number(
+              prompt(
+                "Seleccione el ejercicio que desea ver\
+                1.Múltiplos de 3 que hay entre 1 y 100.\
+                2.Números impares entre 0 y 100.\
+                3.Números pares del 1 al 100.\
+                4.Cuadrados de los números del 1 al 30.\
+                5.Sumar los cuadrados de los cien primeros números naturales.\
+                6.Números comprendidos entre dos numeros en secuencia ascendente.\
+                7.Sumar todos los números que se digitan por teclado mientras no sea cero.\
+                "
+              )
+            );
+
+            switch (Eleccion2) {
+              case 1:
+                let MultiplosDelTres = () => {
+                  console.log("Múltiplos de 3 que hay entre 1 y 100:");
+                  for (let b = 0; b <= 100; b += 3) {
+                    console.log(b);
+                  }
+                };
+
+                MultiplosDelTres();
+                break;
+              case 2:
+                function Impares() {
+                  console.log("Números impares entre 0 y 100:");
+                  for (let a = 1; a <= 100; a += 2) {
+                    console.log(a);
+                  }
+                }
+                Impares();
+                break;
+              case 3:
+                console.log("Números pares del 1 al 100");
+                let Pares = () => {
+                  for (let c = 0; c <= 100; c += 2) {
+                    console.log(c);
+                  }
+                };
+                Pares();
+                break;
+              case 4:
+                console.log("Los  cuadrados de los números del 1 al 30");
+                function Cuadrados() {
+                  for (let j = 1; j <= 30; j++) {
+                    res = j * j;
+                    console.log(res);
+                  }
+                }
+                Cuadrados();
+                break;
+              case 5:
+                let sumaCuadrados = () => {
+                  console.log(
+                    "Suma de los cuadrados de los cien primeros números naturales:"
+                  );
+                  let suma = 0;
+                  for (let h = 1; h <= 100; h++) {
+                    suma += h * h;
+                  }
+                  console.log(suma);
+                };
+                sumaCuadrados();
+                break;
+              case 6:
+                console.log(
+                  "Dos números naturales, el primero menor que el segundo,Mostrar todos los números comprendidos entre ellos en secuencia ascendente"
+                );
+                function NumerosComprendidos(num1, num2) {
+                  for (let i = num1 + 1; i < num2; i++) {
+                    console.log(i);
+                  }
+                }
+                NumerosComprendidos(67, 176);
+                break;
+              case 7:
+                console.log(
+                  "Sumar todos los números que se digitan por teclado mientras no sea cero"
+                );
+                function SumarNumeros(num1, num2) {
+                  while (num1 !== 0 && num2 !== 0) {
+                    var suma = num1 + num2;
+                    console.log(suma);
+                  }
+                }
+                SumarNumeros(23, 45);
+            }
+            break;
+        }
+      } while (Opcion != 0);
+    </script>
+  </body>
+</html>
